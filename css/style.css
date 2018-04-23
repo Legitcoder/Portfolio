@@ -28,7 +28,7 @@ body {
   grid-row: 1 / 2;
   display: flex;
   position: sticky;
-  height: 13vh;
+  height: 15vh;
   top: 0;
   left: 0;
   right: 0;
@@ -36,7 +36,9 @@ body {
   align-items: center;
   background: transparent;
   background-repeat: no-repeat;
-  transition: .5s; }
+  opacity: .9;
+  transition: .5s;
+  z-index: 10; }
   .header .social {
     display: flex;
     justify-content: flex-start;
@@ -53,7 +55,7 @@ body {
       .header .social__item a svg {
         height: 3.5rem;
         width: 3.5rem;
-        fill: #000;
+        fill: #fff;
         transition: all .2s;
         margin-bottom: .25rem; }
       .header .social__item a:hover svg {
@@ -64,7 +66,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 20%; }
+    flex-basis: 22.5%; }
     .header .navigation__item {
       list-style: none;
       padding: .3rem 1rem; }
@@ -72,27 +74,18 @@ body {
         margin-right: 1.5rem; }
     .header .navigation__link, .header .navigation__link:visited, .header .navigation__link:link {
       display: inline-block;
-      font-size: 2.0rem;
+      font-size: 2.25rem;
       font-weight: 650;
       text-decoration: none;
-      color: #000;
+      color: #fff;
       transition: all .2s;
       cursor: pointer; }
     .header .navigation__link:hover {
-      border-bottom: solid inherit .5rem;
+      border-bottom: solid #fff .5rem;
       transform: translateY(-0.5rem) scale(1.15); }
     .header .navigation__link:active {
       transform: translateY(0) scale(1);
       border-bottom: none; }
-
-.blue-gradient {
-  animation: fadeIn 3s; }
-
-@keyframes fadeIn {
-  from {
-    background: transparent; }
-  to {
-    background: linear-gradient(to right bottom, #011936 10%, #132356 95%); } }
 
 .container {
   display: grid;
@@ -122,3 +115,20 @@ body {
 
 .margin-bottom-huge {
   margin-bottom: 8rem; }
+
+.bg-video {
+  grid-column: 1 / -1;
+  grid-row: 1 / 5; }
+  .bg-video__heading {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    color: #fff;
+    display: inline-block;
+    font-size: 10rem;
+    text-shadow: 1.4rem 1.4rem 0.9rem black; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover; }
