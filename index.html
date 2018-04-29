@@ -17,8 +17,8 @@
             <ul class="navigation">
                 <li class="navigation__item home"><a class="navigation__link" href="#">Home</a></li>
                 <li class="navigation__item about"><a class="navigation__link" href="#">Projects</a></li>
-                <li class="navigation__item blog"><a class="navigation__link" href="#">Blog</a></li>
-                <li class="navigation__item contact"><a class="navigation__link" href="#">Contact</a></li>
+                <!-- <li class="navigation__item blog"><a class="navigation__link" href="#">Blog</a></li> -->
+                <li class="navigation__item contact-link"><a class="navigation__link" href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="bg-video">
@@ -31,7 +31,25 @@
             </video>
         </div>
         <!-- <div class="section-1" id="#section-1"><h1>Section 1 of Testing Scrolling using JS</h1></div> -->
-        <div class="section-2" id="#section-2"><h1>Section 2 of Testing Scrolling using JS</h1></div>
+        <div class="section-2" id="#section-2"><h1>This is where projects go</h1></div>
+        <div class="contact">
+            <form class="contact__form" action="https://formspree.io/u_moin75@yahoo.com" method="POST">
+                <div class="form__group">
+                    <label for="name" class="form__label">Full Name</label>
+                    <input type="text" class="form__input" name="name" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" name="_replyto" id="email" placeholder="email" required>
+                </div>
+
+                <div class="form__group">
+                        <label for="message" class="form__label">Message</label>
+                         <textarea name="message" id="message" cols="30" rows="10" required ></textarea>
+                </div>
+              <input type="submit" value="Send">
+          </form>
+        </div>
         <script rel="text/javascript" src="js/main.js"></script> 
     </body>
 </html>
