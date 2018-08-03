@@ -1,0 +1,93 @@
+.header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    position: sticky;
+    height: 15vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    background-repeat: no-repeat;
+    transition: .5s;
+    z-index: 10;
+
+    .social {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: auto;
+        height: 100%;
+        
+        &__item {
+            list-style: none;
+            padding: .8rem;
+
+            &:first-child {
+                margin-left: 1rem;
+                margin-right: 2rem;
+            }
+
+            a svg {
+                height: 3.5rem;
+                width: 3.5rem;
+                fill: #fff;
+                transition: all .2s;
+                margin-bottom: .25rem;
+            }
+
+            a:hover {
+                
+                svg {
+                    transform: translateY(-.5rem) scale(1.3) scaleX(1.1);
+                }
+            }
+
+            a:active {
+                svg {
+                    transform: translateY(0) scale(1) scaleX(1);
+                }
+            }
+        }
+    }
+
+  
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-basis: 18%;
+
+        &__item {
+            list-style: none;
+            padding: .3rem 1rem;
+            &:last-child {
+                margin-right: 1.5rem;
+            }
+        }
+
+        &__link, &__link:visited, &__link:link {
+            display: inline-block;
+            font-size: 2.25rem;
+            font-weight: 650;
+            text-decoration: none;
+            color: #fff;
+            transition: all .2s;
+            cursor: pointer;
+        }
+
+        &__link:hover {
+            border-bottom: solid #fff .5rem;
+            transform: translateY(-.5rem) scale(1.15);
+        }
+
+        &__link:active {
+            transform: translateY(0) scale(1);
+            border-bottom: none;
+        }
+
+    }
+}

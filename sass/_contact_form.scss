@@ -1,0 +1,61 @@
+.contact{
+    grid-column: content-start / content-end;
+    height: 85vh;
+    padding: 6rem;
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: gray;
+        color: #fff;
+        font-size: 1.75rem;
+        width: 10%;
+        padding: 2.5rem;
+        cursor: pointer;
+
+    }
+    
+    &__form {
+        background-color: #1B1B1B;
+        height: 100%;
+        display: flex;
+        padding: 10rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        
+        .form {
+            &__label {
+                font-size: 4rem;
+                color: #ccd9e4;
+            }
+
+            &__group {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+            }
+            &__input {
+                font-size: 2.5rem;
+                outline: none;
+                background-color: gray;
+                color: #fff;
+                &--name {
+                    height: 4rem;
+                    width: 50rem;
+                }
+                &--email {
+                    height: 4rem;
+                    width: 50rem;
+                }
+                &--message {
+                    height: 14rem;
+                    width: 50rem;
+                }
+            }
+        }
+    }
+}

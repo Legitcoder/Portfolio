@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-template-rows: [navbar-start] 15vh [navbar-end] 85vh [bgVideo-end];
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(7, minmax(min-content, 1fr)) [content-end] minmax(6rem, 1fr) [full-end];
+    grid-row-gap: 3rem;
+    //grid-column-gap: 3rem;
+    background-color: #353535;
+}

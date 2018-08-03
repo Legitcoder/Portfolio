@@ -1,0 +1,53 @@
+.bg-video {
+    grid-column: 1 / -1;
+    grid-row: navbar-start / bgVideo-end;
+    height: 100vh;
+
+    &__heading {
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        color: #fff;
+        display: inline-block;
+        font-size: 10rem;
+        text-shadow: 1.4rem 1.4rem .9rem rgba(0, 0, 0, .9);
+        z-index: 1;
+        animation: moveUp .5s ease;
+        transition: all .2s;
+    }
+
+    &__heading:hover {
+        opacity: .80;
+        cursor: default;
+    }
+
+    @keyframes moveUp {
+        0% {
+            opacity: 0;
+            transform: translateY(4rem);
+        }
+        25% {
+            opacity: 0.25;
+            transform: translateY(3rem);
+        }
+        50% {
+            opacity: 0.5;
+            transform: translateY(2rem);
+        }
+        75% {
+            opacity: 0.75;
+            transform: translateY(1rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+    &__content {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-size: cover;
+    }
+}
