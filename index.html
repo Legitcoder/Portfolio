@@ -15,9 +15,9 @@
                 <li class="social__item linkedin"><a href="https://www.linkedin.com/in/moin-uddin/"><svg><use xlink:href="img/sprite.svg#icon-linkedin"></a></li>
             </ul>
             <ul class="navigation">
-                <li class="navigation__item about"><a class="navigation__link" href="#">Projects</a></li>
+                <li class="navigation__item about"><a class="navigation__link navigation__link--projects" href="#projects">Projects</a></li>
                 <!-- <li class="navigation__item blog"><a class="navigation__link" href="#">Blog</a></li> -->
-                <li class="navigation__item contact-link"><a class="navigation__link" href="#">Contact</a></li>
+                <li class="navigation__item contact-link"><a class="navigation__link navigation__link--contact" href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="bg-video">
@@ -30,12 +30,12 @@
             </video>
         </div>
         <!-- <div class="section-1" id="#section-1"><h1>Section 1 of Testing Scrolling using JS</h1></div> -->
-        <div class="projects" id="#section-2">
+        <div class="projects" id="projects">
             <div class="projects__item projects__item--cryptoTracker">
                 <h1 class="heading-secondary margin-bottom-small">CryptoCurrency Portfolio Tracker</h1>
-                <div class="projects__imgs">
-                <img src="https://media.giphy.com/media/TE692xS4mkly2ygrWO/giphy.gif" height="398">
-                <img src="https://media.giphy.com/media/2jMoqnXrPAIlo1aNeH/giphy.gif" height="398">
+                <div class="projects__imgs projects__imgs--cryptoTracker">
+                <img src="https://media.giphy.com/media/TE692xS4mkly2ygrWO/giphy.gif">
+                <img src="https://media.giphy.com/media/2jMoqnXrPAIlo1aNeH/giphy.gif">
                 </div>
                 <div class="projects__details">
                     <p>
@@ -47,9 +47,9 @@
                 </div>
             </div>
             <div class="projects__item projects__item--myPiggyBank">
-                <h1 class="heading-secondary margin-bottom-small">My Piggy Bank</h1>
+                <h1 class="heading-secondary margin-top-medium margin-bottom-small">My Piggy Bank</h1>
                 <div class="projects__imgs projects__imgs--myPiggyBank">
-                    <img src="http://i.imgur.com/APxh8YM.png?1"  width="360" height="199"/>
+                    <img src="img/my-piggy-bank/mypiggybank2.png" />
                     <img src="https://i.imgflip.com/1ek68c.gif" title="made at imgflip.com"/>
                 </div>
                 <div class="projects__details">
@@ -62,8 +62,11 @@
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <form class="contact__form" action="https://formspree.io/u_moin75@yahoo.com" method="POST">
+                <div class="contact__header">
+                <h1 class="heading-primary heading-primary--contact">Contact</h1>
+                </div>
                 <div class="form__group">
                     <label for="name" class="form__label">Name</label>
                     <input type="text" class="form__input form__input--name" name="name" id="name" required>
@@ -80,6 +83,9 @@
               <button type="submit" class="contact__btn margin-top-medium"><p>Send<p></button>
           </form>
         </div>
+        <footer class="footer">
+            <p>Copyright © 2018 Moin Uddin</p>
+        </footer>
         <script rel="text/javascript" src="js/main.js"></script> 
     </body>
 </html>

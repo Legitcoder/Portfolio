@@ -18,6 +18,27 @@ $quaternary: #83BCFF;
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px(standard) = 62.5%
+    
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @media (max-width: 50em) {
+        font-size: 80.5%
+    }
+
+    @include respond(tab-port) {
+        font-size: 53%;
+    }
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 70%;
+    }
+
 }
 
 body {

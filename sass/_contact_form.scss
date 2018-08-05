@@ -1,7 +1,16 @@
 .contact{
     grid-column: content-start / content-end;
-    height: 85vh;
-    padding: 6rem;
+    grid-row: contact-start / contact-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1B1B;
+    height: 100%;
+
+    &__header {
+
+    }
+
 
     &__btn {
         display: flex;
@@ -10,26 +19,36 @@
         text-align: center;
         background-color: gray;
         color: #fff;
-        font-size: 1.75rem;
-        width: 10%;
+        width: 10rem;
+        height: 1rem;
         padding: 2.5rem;
+        padding-top: 1rem;
+        margin-bottom: 2.5rem;
         cursor: pointer;
-
+        p {
+            font-size: 1.75rem;
+        }
     }
     
     &__form {
-        background-color: #1B1B1B;
-        height: 100%;
+        width: 100%;
         display: flex;
-        padding: 10rem;
         flex-direction: column;
-        justify-content: center;
-        align-items: center; 
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        
         
         .form {
             &__label {
                 font-size: 4rem;
                 color: #ccd9e4;
+                @include respond(tab-port) {
+                    font-size: 2rem;
+                }
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
             }
 
             &__group {
@@ -43,17 +62,21 @@
                 outline: none;
                 background-color: gray;
                 color: #fff;
+                width: 50rem;
+                @include respond(tab-port) {
+                    width: 38rem;
+                }
+                @include respond(phone) {
+                    width: 20rem;
+                }
                 &--name {
                     height: 4rem;
-                    width: 50rem;
                 }
                 &--email {
                     height: 4rem;
-                    width: 50rem;
                 }
                 &--message {
                     height: 14rem;
-                    width: 50rem;
                 }
             }
         }

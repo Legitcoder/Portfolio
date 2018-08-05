@@ -1,8 +1,16 @@
 .container {
     display: grid;
-    grid-template-rows: [navbar-start] 15vh [navbar-end] 85vh [bgVideo-end];
+    grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 170vh) [projects-end contact-start] minmax(min-content, 100vh) [contact-end footer-start] min-content [footer-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(7, minmax(min-content, 1fr)) [content-end] minmax(6rem, 1fr) [full-end];
     grid-row-gap: 3rem;
     //grid-column-gap: 3rem;
     background-color: #353535;
+
+    @include respond(tab-land) {
+        grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 130vh) [projects-end contact-start] minmax(min-content, 80vh) [contact-end footer-start] min-content [footer-end];
+    }
+
+    @include respond(phone) {
+        grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 130vh) [projects-end contact-start] minmax(min-content, 60vh) [contact-end footer-start] min-content [footer-end];
+    }
 }

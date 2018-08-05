@@ -1,11 +1,12 @@
 .projects{
     grid-column: content-start / content-end;
-    display: grid;
-    height: 90vh;
+    grid-row: projects-start / projects-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
-    grid-row-gap: 4rem;
-    justify-content: center;
     &__item {
         display: grid;
         justify-items: center;
@@ -17,6 +18,27 @@
         display: flex;
         &--myPiggyBank {
             flex-direction: column;
+            img {
+                width: 36rem;
+                height: 19.9rem;
+
+                @include respond(tab-land) {
+                    width: 33rem;
+                    height: 16.9rem; 
+                }
+            }
+          }
+
+        &--cryptoTracker{
+        img {
+            width: 19.2rem;
+            height: 39.8rem;
+
+            @include respond(tab-land) {
+                width: 16.2rem;
+                height: 36.8rem; 
+            }
+        }
         }
     }
 
