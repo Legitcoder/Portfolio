@@ -11,6 +11,21 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 50em) {
+    html {
+      font-size: 80.5%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 53%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 70%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -18,11 +33,24 @@ body {
   line-height: 1.6; }
 
 .heading-primary {
-  font-size: 5rem; }
+  font-size: 5rem;
+  color: #ccd9e4; }
 
 .heading-secondary {
   font-size: 3.5rem;
   color: #ccd9e4; }
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row: footer-start / footer-end;
+  display: flex;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1B1B;
+  height: 5vh; }
 
 .header {
   grid-column: 1 / -1;
@@ -58,6 +86,10 @@ body {
         fill: #fff;
         transition: all .2s;
         margin-bottom: .25rem; }
+        @media (max-width: 37.5em) {
+          .header .social__item a svg {
+            height: 2.0rem;
+            width: 2.0rem; } }
       .header .social__item a:hover svg {
         transform: translateY(-0.5rem) scale(1.3) scaleX(1.1); }
       .header .social__item a:active svg {
@@ -80,6 +112,9 @@ body {
       color: #fff;
       transition: all .2s;
       cursor: pointer; }
+      @media (max-width: 37.5em) {
+        .header .navigation__link, .header .navigation__link:visited, .header .navigation__link:link {
+          font-size: 1.8rem; } }
     .header .navigation__link:hover {
       border-bottom: solid #fff .5rem;
       transform: translateY(-0.5rem) scale(1.15); }
@@ -89,19 +124,26 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [navbar-start] 15vh [navbar-end] 85vh [bgVideo-end];
+  grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 170vh) [projects-end contact-start] minmax(min-content, 100vh) [contact-end footer-start] min-content [footer-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(7, minmax(min-content, 1fr)) [content-end] minmax(6rem, 1fr) [full-end];
   grid-row-gap: 3rem;
   background-color: #353535; }
+  @media (max-width: 75em) {
+    .container {
+      grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 130vh) [projects-end contact-start] minmax(min-content, 80vh) [contact-end footer-start] min-content [footer-end]; } }
+  @media (max-width: 37.5em) {
+    .container {
+      grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 130vh) [projects-end contact-start] minmax(min-content, 60vh) [contact-end footer-start] min-content [footer-end]; } }
 
 .projects {
   grid-column: content-start / content-end;
-  display: grid;
-  height: 90vh;
+  grid-row: projects-start / projects-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
-  grid-row-gap: 4rem;
-  justify-content: center; }
+  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr)); }
   .projects__item {
     display: grid;
     justify-items: center;
@@ -111,6 +153,20 @@ body {
     display: flex; }
     .projects__imgs--myPiggyBank {
       flex-direction: column; }
+      .projects__imgs--myPiggyBank img {
+        width: 36rem;
+        height: 19.9rem; }
+        @media (max-width: 75em) {
+          .projects__imgs--myPiggyBank img {
+            width: 33rem;
+            height: 16.9rem; } }
+    .projects__imgs--cryptoTracker img {
+      width: 19.2rem;
+      height: 39.8rem; }
+      @media (max-width: 75em) {
+        .projects__imgs--cryptoTracker img {
+          width: 16.2rem;
+          height: 36.8rem; } }
   .projects__details {
     display: flex;
     justify-content: center;
@@ -149,8 +205,7 @@ body {
 
 .bg-video {
   grid-column: 1 / -1;
-  grid-row: navbar-start / bgVideo-end;
-  height: 100vh; }
+  grid-row: navbar-start / bgVideo-end; }
   .bg-video__heading {
     position: absolute;
     top: 35%;
@@ -162,6 +217,13 @@ body {
     z-index: 1;
     animation: moveUp .5s ease;
     transition: all .2s; }
+    @media (max-width: 56.25em) {
+      .bg-video__heading {
+        font-size: 6rem; } }
+    @media (max-width: 37.5em) {
+      .bg-video__heading {
+        font-size: 7rem;
+        left: 5%; } }
   .bg-video__heading:hover {
     opacity: .80;
     cursor: default; }
@@ -190,8 +252,12 @@ body {
 
 .contact {
   grid-column: content-start / content-end;
-  height: 85vh;
-  padding: 6rem; }
+  grid-row: contact-start / contact-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1B1B;
+  height: 100%; }
   .contact__btn {
     display: flex;
     justify-content: center;
@@ -199,21 +265,30 @@ body {
     text-align: center;
     background-color: gray;
     color: #fff;
-    font-size: 1.75rem;
-    width: 10%;
+    width: 10rem;
+    height: 1rem;
     padding: 2.5rem;
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
     cursor: pointer; }
+    .contact__btn p {
+      font-size: 1.75rem; }
   .contact__form {
-    background-color: #1B1B1B;
-    height: 100%;
+    width: 100%;
     display: flex;
-    padding: 10rem;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; }
     .contact__form .form__label {
       font-size: 4rem;
       color: #ccd9e4; }
+      @media (max-width: 56.25em) {
+        .contact__form .form__label {
+          font-size: 2rem; } }
+      @media (max-width: 37.5em) {
+        .contact__form .form__label {
+          font-size: 2rem; } }
     .contact__form .form__group {
       display: flex;
       flex-direction: column;
@@ -223,13 +298,17 @@ body {
       font-size: 2.5rem;
       outline: none;
       background-color: gray;
-      color: #fff; }
+      color: #fff;
+      width: 50rem; }
+      @media (max-width: 56.25em) {
+        .contact__form .form__input {
+          width: 38rem; } }
+      @media (max-width: 37.5em) {
+        .contact__form .form__input {
+          width: 20rem; } }
       .contact__form .form__input--name {
-        height: 4rem;
-        width: 50rem; }
+        height: 4rem; }
       .contact__form .form__input--email {
-        height: 4rem;
-        width: 50rem; }
+        height: 4rem; }
       .contact__form .form__input--message {
-        height: 14rem;
-        width: 50rem; }
+        height: 14rem; }
