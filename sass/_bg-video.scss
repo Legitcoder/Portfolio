@@ -12,12 +12,7 @@
         z-index: 1;
         animation: moveUp .5s ease;
         transition: all .2s;
-
-        // @include respond(tab-land) {
-        //     font-size: 8rem;
-        //     top: 20%;
-        // }
-
+        
         @include respond(tab-port) {
             font-size: 6rem;
         }
