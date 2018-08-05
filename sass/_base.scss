@@ -23,10 +23,6 @@ html {
         font-size: 56.25%;
     }
 
-    @media (max-width: 50em) {
-        font-size: 80.5%
-    }
-
     @include respond(tab-port) {
         font-size: 53%;
     }
