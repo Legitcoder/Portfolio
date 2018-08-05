@@ -1,6 +1,7 @@
 .bg-video {
     grid-column: 1 / -1;
     grid-row: navbar-start / bgVideo-end;
+    position: relative;
     &__heading {
         position: absolute;
         top: 35%;
@@ -12,7 +13,7 @@
         z-index: 1;
         animation: moveUp .5s ease;
         transition: all .2s;
-        
+
         @include respond(tab-port) {
             font-size: 6rem;
         }

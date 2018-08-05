@@ -20,6 +20,9 @@ html {
   @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 70%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -38,13 +41,14 @@ body {
   grid-column: 1 / -1;
   grid-row: footer-start / footer-end;
   display: flex;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
   justify-content: center;
   align-items: center;
   background-color: #1B1B1B;
   height: 5vh; }
+  .footer p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold; }
 
 .header {
   grid-column: 1 / -1;
@@ -191,7 +195,8 @@ body {
 
 .bg-video {
   grid-column: 1 / -1;
-  grid-row: navbar-start / bgVideo-end; }
+  grid-row: navbar-start / bgVideo-end;
+  position: relative; }
   .bg-video__heading {
     position: absolute;
     top: 35%;
