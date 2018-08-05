@@ -14,18 +14,12 @@ html {
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 50em) {
-    html {
-      font-size: 80.5%; } }
   @media (max-width: 56.25em) {
     html {
       font-size: 53%; } }
   @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
-    html {
-      font-size: 70%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -124,16 +118,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 170vh) [projects-end contact-start] minmax(min-content, 100vh) [contact-end footer-start] min-content [footer-end];
+  grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, max-content) [projects-end contact-start] minmax(min-content, max-content) [contact-end footer-start] min-content [footer-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(7, minmax(min-content, 1fr)) [content-end] minmax(6rem, 1fr) [full-end];
   grid-row-gap: 3rem;
   background-color: #353535; }
-  @media (max-width: 75em) {
-    .container {
-      grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 130vh) [projects-end contact-start] minmax(min-content, 80vh) [contact-end footer-start] min-content [footer-end]; } }
-  @media (max-width: 37.5em) {
-    .container {
-      grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, 130vh) [projects-end contact-start] minmax(min-content, 60vh) [contact-end footer-start] min-content [footer-end]; } }
 
 .projects {
   grid-column: content-start / content-end;
@@ -141,9 +129,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr)); }
+  align-items: center; }
   .projects__item {
     display: grid;
     justify-items: center;
