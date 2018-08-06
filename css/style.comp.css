@@ -32,6 +32,14 @@ body {
 .heading-primary {
   font-size: 5rem;
   color: #ccd9e4; }
+  .heading-primary--contact {
+    margin-bottom: .5rem; }
+    @media (max-width: 56.25em) {
+      .heading-primary--contact {
+        font-size: 3rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--contact {
+        font-size: 2.2rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -249,8 +257,18 @@ body {
   align-items: center;
   background-color: #1B1B1B;
   height: 100%; }
+  .contact__header {
+    align-self: center;
+    width: 40%;
+    margin-bottom: 2rem; }
+    @media (max-width: 37.5em) {
+      .contact__header {
+        width: 30%; } }
+  .contact__horizontal-line {
+    color: orange; }
   .contact__btn {
     display: flex;
+    outline: none;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -261,9 +279,15 @@ body {
     padding: 2.5rem;
     padding-top: 1rem;
     margin-bottom: 2.5rem;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all .2s; }
+    .contact__btn:hover {
+      background-color: #696969; }
+    .contact__btn:active p {
+      transform: translateY(0.2rem); }
     .contact__btn p {
-      font-size: 1.75rem; }
+      font-size: 1.75rem;
+      line-height: 1.2rem; }
   .contact__form {
     width: 100%;
     display: flex;
@@ -290,7 +314,10 @@ body {
       outline: none;
       background-color: gray;
       color: #fff;
-      width: 50rem; }
+      width: 50rem;
+      transition: all .2s; }
+      .contact__form .form__input:hover {
+        background-color: #696969; }
       @media (max-width: 56.25em) {
         .contact__form .form__input {
           width: 38rem; } }
