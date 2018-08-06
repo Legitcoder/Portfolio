@@ -82,6 +82,10 @@
                 background-color: gray;
                 color: #fff;
                 width: 50rem;
+                transition: all .2s;
+                &:hover {
+                    background-color: #696969
+                }
                 @include respond(tab-port) {
                     width: 38rem;
                 }

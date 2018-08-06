@@ -314,7 +314,10 @@ body {
       outline: none;
       background-color: gray;
       color: #fff;
-      width: 50rem; }
+      width: 50rem;
+      transition: all .2s; }
+      .contact__form .form__input:hover {
+        background-color: #696969; }
       @media (max-width: 56.25em) {
         .contact__form .form__input {
           width: 38rem; } }
