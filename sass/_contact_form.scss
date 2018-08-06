@@ -8,12 +8,22 @@
     height: 100%;
 
     &__header {
+        align-self: center;
+        width: 40%;
+        margin-bottom: 2rem;
+        @include respond(phone) {
+            width: 30%
+        }
+    }
 
+    &__horizontal-line {
+        color: orange;
     }
 
 
     &__btn {
         display: flex;
+        outline: none;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -25,8 +35,17 @@
         padding-top: 1rem;
         margin-bottom: 2.5rem;
         cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color: #696969
+        }
+        &:active p {
+            transform: translateY(.2rem);
+        }
         p {
             font-size: 1.75rem;
+            line-height: 1.2rem;
         }
     }
     
