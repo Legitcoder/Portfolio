@@ -26,7 +26,8 @@
     }
 
     &__heading:hover {
-        opacity: .80;
+        opacity: .70;
+        transform: skewX(-5deg);
         cursor: default;
     }
 
