@@ -43,17 +43,12 @@
                 }
             }
 
-            a:hover {
-                
-                svg {
+            a:hover svg {
                     transform: translateY(-.5rem) scale(1.3) scaleX(1.1);
-                }
             }
 
-            a:active {
-                svg {
+            a:active svg {
                     transform: translateY(0) scale(1) scaleX(1);
-                }
             }
         }
     }

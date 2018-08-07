@@ -55,7 +55,17 @@
         a svg {
             height: 6rem;
             width: 6rem;
-            fill: #ccd9e4;           
+            fill: #ccd9e4;
+            transition: all .2s; 
+        }   
+
+        a:hover svg {
+            transform: translateY(-.3rem) scale(1.3) scaleX(1.1);
         }
+
+        a:active svg {
+            transform: translateY(0) scale(1) scaleX(1);
+        }   
+
     }
 }
