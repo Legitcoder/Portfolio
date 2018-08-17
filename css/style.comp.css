@@ -130,7 +130,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 100vh) [bgVideo-end projects-start] minmax(min-content, max-content) [projects-end contact-start] minmax(min-content, max-content) [contact-end footer-start] min-content [footer-end];
+  grid-template-rows: [navbar-start] 15vh [navbar-end] minmax(min-content, 85vh) [bgVideo-end projects-start] minmax(min-content, max-content) [projects-end contact-start] minmax(min-content, max-content) [contact-end footer-start] min-content [footer-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(7, minmax(min-content, 1fr)) [content-end] minmax(6rem, 1fr) [full-end];
   grid-row-gap: 3rem;
   background-color: #353535; }
