@@ -5,31 +5,6 @@
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    let concreteJungle = {"mp4": "img/Concrete_Jungle/Concrete_Jungle.mp4", "ogv": "img/Concrete_Jungle/Concrete_Jungle.ogv", "webm": "img/Concrete_Jungle/Concrete_Jungle.webm" };
-    let loveCoding = {"mp4": "img/Love-Coding/Love-Coding.mp4", "ogv": "img/Love-Coding/Love-Coding.ogv", "webm": "img/Love-Coding/Love-Coding.webm" };
-    let mtaTrain = {"mp4": "img/Under/Under.mp4", "ogv": "img/Under/Under.ogv", "webm": "img/Under/Under.webm" };
-    let undergroundTraffic = {"mp4": "img/Underground-Traffic/Underground-Traffic.mp4", "webm": "img/Underground-Traffic/Underground-Traffic.webm" }
-    let helloWorld = {"mp4": "img/Hello-World/Hello-World.mp4", "webm": "img/Hello-World/Hello-World.webm", "ogv": "img/Hello-World/Hello-World.ogv" }
-    let videos = [concreteJungle, loveCoding, undergroundTraffic, helloWorld, mtaTrain];
-    let coverVideo = document.querySelector('.bg-video__content');
-    let mp4Src = document.querySelector('.video__content__mp4');
-    let ogvSrc = document.querySelector('.video__content__ogv');
-    let webmSrc = document.querySelector('.video__content__webm');
-    
-    let currentVideo = 0;
-
-    let coverShowCase = () => {      
-        //CurrentVideo starts at (Index One/Second Element) because by default the first video plays on HTML markup. 
-        currentVideo++;
-        if (currentVideo >= videos.length) {
-            currentVideo = 0;
-        }
-        mp4Src.src = videos[currentVideo].mp4;
-        ogvSrc.src = videos[currentVideo].ogv;
-        webmSrc.src = videos[currentVideo].webm;
-        coverVideo.load();
-    }
-       setInterval(coverShowCase, 10000);
 
        let copyRight = document.querySelector('.footer > p');
        copyRight.innerText = `Copyright © ${(new Date).getFullYear()} Moin Uddin`
