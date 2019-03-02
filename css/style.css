@@ -158,6 +158,13 @@ body {
           .projects__imgs--myPiggyBank img {
             width: 33rem;
             height: 16.9rem; } }
+    .projects__imgs--sentimentBot img {
+      width: 19.2rem;
+      height: 39.8rem; }
+      @media (max-width: 75em) {
+        .projects__imgs--sentimentBot img {
+          width: 16.2rem;
+          height: 36.8rem; } }
     .projects__imgs--cryptoTracker img {
       width: 19.2rem;
       height: 39.8rem; }

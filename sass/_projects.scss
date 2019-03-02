@@ -28,7 +28,17 @@
                 }
             }
           }
-
+        &--sentimentBot{
+            img {
+                width: 19.2rem;
+                height: 39.8rem;
+    
+                @include respond(tab-land) {
+                    width: 16.2rem;
+                    height: 36.8rem; 
+                }
+            }           
+        }
         &--cryptoTracker{
         img {
             width: 19.2rem;
